@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000; // Utilisez le port fourni par Heroku, ou
 const { Client, GatewayIntentBits, EmbedBuilder, Partials } = require('discord.js');
 
 const discordBot = new Client({ intents: [GatewayIntentBits.Guilds], partials: [Partials.Channel] });
-discordBot.login('MTIxMTA0MTY2NTY0OTg3NzAzMg.GDV9Uo.dZo3H2LogYbyVW4oyPnKuD4siH-P1tjqbDJdrE');
+discordBot.login('MTIxMTA0MTY2NTY0OTg3NzAzMg.GBWF2P.hGi-V_eeYPABXiRck5AZ5LRyTzNtLnR6JI7aDQ');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
